@@ -1,0 +1,12 @@
+---
+- name: Distribution System
+  debug: msg="{{ansible_system}}"
+
+- name: distribution Version
+  debug: msg="{{ansible_os_family}}" 
+
+- name: Distribution Major Verision
+  debug: msg="{{ansible_distribution_major_version}}"
+
+- name: Distribution Version
+  debug: msg="{{ansible_distribution_version}}" 

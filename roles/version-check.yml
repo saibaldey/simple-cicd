@@ -1,0 +1,8 @@
+---
+- name: Checking OS Details
+  hosts: all
+  become: true
+  become: root
+  gather_facts: true
+  roles:
+    - version-check
