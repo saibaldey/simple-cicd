@@ -1,7 +1,7 @@
 node {"master"} {
   stage{"File Upload"} {
     def inputFile = input message: 'Upload file', parameters: [file(name: 'hosts')]
-    new hudson.FilePath(new File("$workspace/hosts")).copyFrom(inputFile)
+    new hudson.FilePath(new File("${WORKSPACE}/hosts")).copyFrom(inputFile)
     inputFile.delete()
   }
   stage{"Check Input file"} {
