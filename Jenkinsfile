@@ -13,6 +13,7 @@ sed -i '1i [hostgroup]' hosts
       echo "File Uploaded Successfully"
       sh "cat ${WORKSPACE}/hosts"
       echo "${WORKSPACE}"
+      sh "cd ${WORKSPACE} && ls -l"
     }
     else{
       echo "File Upload failed"
