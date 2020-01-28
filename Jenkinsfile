@@ -1,5 +1,4 @@
-pipeline {
-  agent any
+node{'master'} {
   stage{"File Upload"} {
     def inputFile = input message: 'Upload file', parameters: [file(name: 'hosts')]
     new hudson.FilePath(new File("${WORKSPACE}/hosts")).copyFrom(inputFile)
