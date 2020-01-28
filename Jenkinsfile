@@ -11,6 +11,8 @@ sh '''
 sed -i '1i [hostgroup]' hosts
 '''
       echo "File Uploaded Successfully"
+      sh "cat ${WORKSPACE}/hosts"
+      echo "${WORKSPACE}"
     }
     else{
       echo "File Upload failed"
