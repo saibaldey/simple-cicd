@@ -1,3 +1,4 @@
+pipeline {
 node {'master'} {
   stage{"File Upload"} {
     def inputFile = input message: 'Upload file', parameters: [file(name: 'hosts')]
@@ -23,4 +24,5 @@ node {'master'} {
       throw e
     }
   }
+}
 }
