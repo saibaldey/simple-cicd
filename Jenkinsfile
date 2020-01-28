@@ -7,7 +7,9 @@ node ('master') {
   stage("Check Input file") {
     conditionCheck = fileExists('hosts')toString()
     if(conditionCheck == 'true'){
-      sh '''sed -i 'li [hostgroup]' hosts'''
+sh '''
+sed -i 'li [hostgroup]' hosts
+'''
       echo "File Uploaded Successfully"
     }
     else{
