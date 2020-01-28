@@ -1,4 +1,4 @@
-node {"master"} {
+node {} {
   stage{"Validaing OS Versions"} {
     try{
       sh "cd ${WORKSPACE} && ansible-playbook -i hosts version-check.yml --limit ${hostlist}"
