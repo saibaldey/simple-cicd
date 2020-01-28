@@ -22,7 +22,7 @@ sed -i '1i [hostgroup]' hosts
   }
   stage("Validaing OS Versions") {
     try{
-      sh "cd ${WORKSPACE} && ansible-playbook -i hosts roles/version-check.yml --limit ${hostlist}"
+      sh "cd ${WORKSPACE} && ansible-playbook -i hosts roles/version-check.yml"
     } catch(e) {
       echo{"************ VERSION CHECK FAILED ****************"}
       throw e
