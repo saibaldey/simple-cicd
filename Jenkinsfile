@@ -1,3 +1,5 @@
-node {master} {
-echo "hello"
+node {"master"} 
+{
+  echo "hello"
+  echo "master=${master}"
 }
