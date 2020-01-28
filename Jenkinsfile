@@ -8,7 +8,7 @@ node ('master') {
     conditionCheck = fileExists('hosts')toString()
     if(conditionCheck == 'true'){
 sh '''
-sed -i 'li [hostgroup]' hosts
+sed -i '1i [hostgroup]' hosts
 '''
       echo "File Uploaded Successfully"
     }
