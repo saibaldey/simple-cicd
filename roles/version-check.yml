@@ -2,7 +2,7 @@
 - name: Checking OS Details
   hosts: all
   become: true
-  become_user: ec2-user
+  become_user: centos
   gather_facts: true
   roles:
     - version-check
