@@ -17,3 +17,8 @@
   
 - name: print installed skype version
   debug: msg="{{ installed_version.stdout_lines }}"
+
+- name: print installed skype version
+  debug: msg="Hello test"
+  when:
+    - installed_version.stdout_lines != ""
