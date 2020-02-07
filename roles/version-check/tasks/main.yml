@@ -13,7 +13,7 @@
 
 - name: check version of Skype
   shell: rpm -qa | grep skype | awk -F"-" '{print $2}'
-  register: installed_version
+  register: installed_version.stdout_lines
   
 - name: print installed skype version
-  debug: msg="{{ installed_version }}"
+  debug: msg="{{ installed_version.stdout_lines }}"
