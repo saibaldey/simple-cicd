@@ -16,4 +16,4 @@
   register: installed_version
   
 - name: print installed skype version
-  msg: {{ installed_version }}
+  debug: msg="{{ installed_version }}"
