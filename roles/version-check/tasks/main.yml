@@ -12,7 +12,7 @@
   debug: msg="{{ansible_distribution_version}}" 
 
 - name: check version of Skype
-  shell: rpm -qa | grep slang | awk -F"-" '{print $2}'
+  shell: rpm -qa | grep skype | awk -F"-" '{print $2}'
   register: installed_version
   
 - name: print installed skype version
