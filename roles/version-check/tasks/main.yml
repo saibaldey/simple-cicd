@@ -17,8 +17,16 @@
   
 - name: print installed skype version
   debug: msg="{{ installed_version.stdout_lines }}"
+  
+- name: setting fact for installed version
+  set_fact: installed_skype_version="{{ installed_version.stdout_lines }}"
 
 - name: print installed skype version
-  debug: msg="Hello test"
+  debug: msg="Hello test without set_fact"
   when:
     - installed_version.stdout_lines != ''
+
+- name: print installed skype version
+  debug: msg="Hello test with set_fact"
+  when:
+    - installed_skype_version != ''
