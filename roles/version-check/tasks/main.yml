@@ -32,4 +32,4 @@
 - name: print installed skype version
   debug: msg="Hello test with set_fact"
   when:
-    - installed_skype_version != ''
+    - installed_skype_version | length > 0
