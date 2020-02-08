@@ -30,11 +30,11 @@
 - name: print installed skype version
   debug: msg="Hello test without set_fact"
   when:
-    - installed_version.stdout_lines | length > 0
+#    - installed_version.stdout_lines | length > 0
     - installed_version.stdout_lines < available_skype_version
 
 - name: print installed skype version
   debug: msg="Hello test with set_fact"
   when:
-    - installed_skype_version | length > 0
+ #   - installed_skype_version | length > 0
     - installed_skype_version < available_skype_version
